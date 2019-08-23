@@ -7,9 +7,9 @@ const Header = () => {
     return (
         <div className="header">
             {
-                moment.weekdaysShort().map(day => {
+                moment.weekdaysShort().map((day,index ) => {
                     return (
-                        <div>
+                        <div key={index}>
                             {day}
                         </div>
                     )
