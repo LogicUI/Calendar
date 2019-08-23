@@ -2,9 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-family: 'Merriweather', serif;
 }
 
 .app__calandar {
   width: 500px;
   height: 500px;
+}
+
+.app__dateSelector {
+  margin: 2rem;
+  border: 1px solid orange;
+  padding: 0.5rem;
+  width: 200px;
+  font-size: 12px;
 }
