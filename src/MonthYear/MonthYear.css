@@ -1,0 +1,9 @@
+.monthYear {
+  display: flex;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 2rem;
+}
+.monthYear > h1 {
+  margin: 0 0.5rem;
+}
