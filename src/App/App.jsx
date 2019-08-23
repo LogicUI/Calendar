@@ -1,13 +1,13 @@
 import React from 'react'
-import moment from "moment";
 import "./App.css";
+import Header from "../Header/Header";
 
 const App = () => {
-    console.log(moment.weekdaysShort());
     return (
         <div className="app">
+            
             <div className="app__calandar">
-                
+                <Header />
             </div>
         </div>
     )
