@@ -2,7 +2,7 @@ import React from 'react'
 import moment from "moment";
 import "./CalendarDayName.css";
 
-const CalendarDay = () => {
+const CalendarDayName = () => {
     
     return (
         <div className="header">
@@ -19,4 +19,4 @@ const CalendarDay = () => {
     )
 }
 
-export default CalendarDay
+export default CalendarDayName
