@@ -22,7 +22,7 @@ describe('CalendarMain ', () => {
     });    
 
     it('should be able to display the calendar when clicking on the label ', () => {
-         const {getByText} = render(<CalendarMain />)
+         const {getByText} = render(<CalendarMain month={8}/>)
          fireEvent.click(getByText("Select A Date"));
          expect(getByText("August 2019")).toBeInTheDocument();
     });
