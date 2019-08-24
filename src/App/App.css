@@ -1,14 +1,10 @@
 .app {
   display: flex;
-  justify-content: center;
+
   align-items: center;
   flex-direction: column;
   font-family: 'Merriweather', serif;
-}
-
-.app__calandar {
-  width: 500px;
-  height: 500px;
+  height: 100vh;
 }
 
 .app__dateSelector {
@@ -17,4 +13,11 @@
   padding: 0.5rem;
   width: 200px;
   font-size: 12px;
+  background-image: url('../Svg/down-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-position: 95% 50%;
+  background-size: 15px 15px;
+  box-sizing: border-box;
+  padding: 15px 25px;
 }
