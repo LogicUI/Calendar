@@ -1,12 +1,13 @@
 import React from 'react'
 import "./App.css";
-import Calendar from "../Calendar/CalendarMain/CalendarMain";
+import CalendarPicker from "../Calendar/CalendarMain/CalendarMain";
+import moment from "moment";
 
 const App = () => {
     return (
         <div className="app" >
             <h1>Calendar App</h1>
-            <Calendar />
+            <CalendarPicker month={moment().format("M")} />
         </div>
     )
 }
