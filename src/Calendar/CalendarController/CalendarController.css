@@ -1,0 +1,21 @@
+.calendarController {
+  display: flex;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 2rem;
+  justify-content: space-evenly;
+}
+.calendarController > h1 {
+  margin: 0 1rem;
+}
+
+.calendarButtons {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.calendarButtons__svgButton {
+  margin: 0 1rem;
+  cursor: pointer;
+}
