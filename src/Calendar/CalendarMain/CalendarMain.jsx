@@ -1,16 +1,33 @@
-import React from 'react'
+import React , { Fragment} from 'react'
 import "./CalendarMain.css"
 import CalendarDayName from "../CalendarDayName/CalendarDayName";
 import CalendarController from "../CalendarController/CalendarController";
 import CalendarDateDays from "../CalendarDateDays/CalendarDateDays";
+import useToggleCalendar from "../../CustomHooks/CalendarHooks/useToggleCalendar";
+import useLabelDate from "../../CustomHooks/CalendarHooks/useLabelDate";
+import useCalendarHook from "../../CustomHooks/CalendarHooks/useCalendarHook";
 
-const CalendarMain = ({month, year , increase , decrease, firstDay ,daysInMonth, change}) => {
+
+
+const CalendarMain = ({month}) => {
+
+    const [date, decreaseMonth, increaseMonth] = useCalendarHook(month);
+
+    const [toggle, toggleHidden] = useToggleCalendar();
+
+    const [labelDate, changeLabelDate] = useLabelDate(date.month,date.year);
+
     return (
-        <div className="calendarMain">
-            <CalendarController month={month} year={year} increase={increase} decrease={decrease} />
+    <Fragment>
+       < label onClick = {() => toggleHidden(true)} className = "dateSelectorLabel" >
+         { labelDate? labelDate: "Select A Date" }
+      </label >
+     {toggle && <div className="calendarMain">
+            <CalendarController month={date.month} year={date.year} increase={increaseMonth} decrease={decreaseMonth} />
             <CalendarDayName />
-            <CalendarDateDays firstDay={firstDay} daysInMonth={daysInMonth} change={change} />
-        </div>
+           <CalendarDateDays firstDay={date.firstDay} daysInMonth={date.daysInMonth} change={changeLabelDate} />
+    </div> }
+   </Fragment>
     )
 }
 
