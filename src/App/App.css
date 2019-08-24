@@ -7,17 +7,3 @@
   height: 100vh;
 }
 
-.app__dateSelector {
-  margin: 2rem;
-  border: 1px solid orange;
-  padding: 0.5rem;
-  width: 200px;
-  font-size: 12px;
-  background-image: url('../Svg/down-arrow.svg');
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-position: 95% 50%;
-  background-size: 15px 15px;
-  box-sizing: border-box;
-  padding: 15px 25px;
-}
