@@ -1,0 +1,12 @@
+.calenderCell:hover {
+  color: white;
+  background: orange;
+  cursor: pointer;
+}
+
+.calenderCell {
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  padding: 10px;
+}
