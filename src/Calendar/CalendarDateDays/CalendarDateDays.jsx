@@ -2,6 +2,8 @@ import React from 'react'
 import CalendarCell from "../CalendarCell/CalendarCell";
 import "./CalendarDateDays.css";
 import uniqid from "uniqid";
+import PropTypes from 'prop-types';
+
 
 const  CalendarDate = ({firstDay,daysInMonth,change}) => {
 
@@ -27,6 +29,11 @@ const  CalendarDate = ({firstDay,daysInMonth,change}) => {
             }
         </div>
     )
+}
+
+CalendarDate.propTypes = {
+    firstDay: PropTypes.number.isRequired,
+    daysInMonth: PropTypes.number.isRequired
 }
 
 export default CalendarDate
